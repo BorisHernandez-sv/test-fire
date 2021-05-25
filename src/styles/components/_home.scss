@@ -1,0 +1,152 @@
+body {
+    // display: flex;
+    // flex-direction:unset;
+    margin: 0;
+    padding: 0;
+   }
+.home__division{
+    display: flex;
+}
+
+.home__left-screen{
+    // background-color: $primary;
+    background-color: white;
+    height: 100vh;
+    width: 50%;
+}
+
+.home__right-screen{
+    background-color: white;
+    height: 100vh;
+    width: 50%;
+
+    
+}
+
+.home__center-item{
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    .home_btn{
+        // background-color: $primary;
+        width: 30%;
+        height: 5%;
+        font-size: 20px;
+
+    }
+}
+
+.home__center-item-logo{
+    align-items: center;
+    height: 50vh;
+    display:grid;
+    justify-content: center;
+    .home_btn{
+        // background-color: $primary;
+        width: 30%;
+        height: 5%;
+        font-size: 20px;
+
+    }
+}
+
+.home__sidebar {
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    display:flex;
+    // justify-content:center;
+    // a {
+    //     float:left;
+    //     display: block;
+    //     color: #547caf;
+    //     text-align: center;
+    //     padding: 14px 16px;
+    //     text-decoration: none;
+    //     font-size: 17px;
+    // }
+
+//Recuadro de seleecion en etiqueta a 
+    // a:hover{
+    //     background-color: #ddd;
+    //     color: black;
+    // }
+
+    a.active{
+        background-color: #04AA6D;
+        color: white;
+    }
+
+    ul {
+        // margin:0 auto;
+        // width:80%;
+        // display:flex;
+        justify-content:space-between;
+        
+    }
+}
+
+.home_sidebar-ul-left{
+    width: 50%;
+    display: flex;
+    a {
+        padding-left: 20%;
+    }
+}
+.home_sidebar-ul-right{
+    width: 50%;
+    padding-right: 8%;
+    a {
+        float:right;
+        color: #547caf;
+        text-align: center;
+        padding: 14px 25px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    
+}
+
+.home_left-paragraph{
+    align-items: center;
+    display: block;
+    overflow: hidden;
+    padding-right: 40%;
+    font-family: ProximaNova, sans-serif;
+    white-space: pre-line;
+    h1{
+        font-size: 62px;
+        line-height: 62px;
+        margin-bottom: -10px;
+    }
+    h3{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 600;
+    }
+}
+
+.Logo1 {
+    width: 228px;
+    height: 228px;
+    border-radius: 6px;
+}
+.Logo2 {
+    width: 142px;
+    height: 142px;
+    border-radius: 6px;
+}
+.Logo3 {
+    width: 285px;
+    height: 285px;
+    border-radius: 6px;
+}
+
+.LogoSider {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+}
