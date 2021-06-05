@@ -6,6 +6,7 @@ import {
     Redirect,
   } from "react-router-dom";
 import { HomeScreen } from '../components/home/HomeScreen';
+import { Review } from '../components/screen-1/Review';
 // import { AuthRouter } from './AuthRouter';
 
 export const AppRouter = () => {
@@ -21,6 +22,11 @@ export const AppRouter = () => {
                         exact
                         path="/"
                         component={ HomeScreen }
+                    />
+                      <Route
+                        exact
+                        path="/review"
+                        component={ Review }
                     />
 
                     <Redirect to="/"/>

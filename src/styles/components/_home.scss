@@ -5,39 +5,157 @@ body {
     padding: 0;
    }
 .home__division{
-    display: flex;
+     // if the breakpoint is less than or equal to 1024px
+    @include media("<=tablet") {
+        // padding: 20px;
+        display:  block;
+    }
+    // if the breakpoint is greater than 1024px and less than or equal to 1920px
+    @include media(">tablet", "<=LGdesktop") {
+        display: flex;
+    }
+
+
 }
 
 .home__left-screen{
     // background-color: $primary;
     background-color: white;
-    height: 100vh;
+
+    // if the breakpoint is less than or equal to 1024px
+    @include media("<=tablet") {
+   
+        height: 50vh;
+        width: 100%;
+        position: relative;
+        bottom: -60vh;
+    }
+    // if the breakpoint is greater than 1024px and less than or equal to 1920px
+    @include media(">tablet", "<=LGdesktop") {
+        height: 85vh;
+        width: 50%;
+    }
+    height: 85vh;
     width: 50%;
 }
 
 .home__right-screen{
     background-color: white;
-    height: 100vh;
+
+    // if the breakpoint is less than or equal to 1024px
+    @include media("<=tablet") {
+        height: 50vh;
+        width: 100%;
+        position: relative;
+        top:-60vh;
+        h3{
+            display: none;
+        }
+        button{
+            display: none;
+        }
+   
+    }
+    // if the breakpoint is greater than 1024px and less than or equal to 1920px
+    @include media(">tablet", "<=LGdesktop") {
+        align-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        height: 85vh;
+        width: 50%;
+    }
+    height: 85vh;
     width: 50%;
 
-    
 }
 
 .home__center-item{
-    align-items: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    .home_btn{
-        // background-color: $primary;
-        width: 30%;
-        height: 5%;
-        font-size: 20px;
+ 
+    // if the breakpoint is less than or equal to 1024px
+    @include media("<=tablet") {
 
+    }
+    // if the breakpoint is greater than 1024px and less than or equal to 1920px
+    @include media(">tablet", "<=LGdesktop") {
+        align-items: center;
+        height: 85vh;
+        display: flex;
+        justify-content: center;
+        .home_btn{
+            // background-color: $primary;
+            width: 30%;
+            height: 5%;
+            font-size: 20px;
+
+        }
     }
 }
 
-.home__center-item-logo{
+.home__center-item-logo12{
+ 
+    // if the breakpoint is less than or equal to 1024px
+    @include media("<=tablet") {
+        // padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        // justify-content: center;
+    }
+    // if the breakpoint is greater than 1024px and less than or equal to 1920px
+    @include media(">tablet", "<=LGdesktop") {
+        align-items: center;
+        height: 85vh;
+        display: flex;
+        justify-content: center;
+    }
+}
+.home__float-div {
+    @include media("<=tablet") {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        position: -webkit-sticky;  // required for Safari
+        position: fixed;
+        bottom: 0; // required as well
+        width: 100%;
+        height: 80px;
+    }
+    // if the breakpoint is greater than 1024px and less than or equal to 1920px
+    @include media(">tablet", "<=LGdesktop") {
+    display: none;
+    }
+}
+.test-btn{
+    @include media("<=tablet") {
+    
+    background-color:#f07;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 7px 10px 7px 10px;
+    height: 60px;
+    border-radius: 4px;
+    width: 70%;
+    font-weight: 800;
+
+
+    transition: color .3s ease;
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        box-shadow: 0px 3px 12px rgba(255, 21, 134, 0.30);
+        color: darken($color: white, $amount: 10);
+    }
+     
+    }
+    
+}
+
+.home__center-item-logo3{
     align-items: center;
     height: 50vh;
     display:grid;
@@ -51,65 +169,20 @@ body {
     }
 }
 
-.home__sidebar {
-    width: 100%;
-    overflow: hidden;
-    background-color: white;
-    display:flex;
-    // justify-content:center;
-    // a {
-    //     float:left;
-    //     display: block;
-    //     color: #547caf;
-    //     text-align: center;
-    //     padding: 14px 16px;
-    //     text-decoration: none;
-    //     font-size: 17px;
-    // }
 
-//Recuadro de seleecion en etiqueta a 
-    // a:hover{
-    //     background-color: #ddd;
-    //     color: black;
-    // }
-
-    a.active{
-        background-color: #04AA6D;
-        color: white;
-    }
-
-    ul {
-        // margin:0 auto;
-        // width:80%;
-        // display:flex;
-        justify-content:space-between;
-        
-    }
-}
-
-.home_sidebar-ul-left{
-    width: 50%;
-    display: flex;
-    a {
-        padding-left: 20%;
-    }
-}
-.home_sidebar-ul-right{
-    width: 50%;
-    padding-right: 8%;
-    a {
-        float:right;
-        color: #547caf;
-        text-align: center;
-        padding: 14px 25px;
-        text-decoration: none;
-        font-size: 17px;
-    }
-    
-}
 
 .home_left-paragraph{
-    align-items: center;
+    @include media("<=tablet") {
+        display: flex;
+        justify-content: center;
+        font-size: 42px;
+        line-height: 62px;
+        margin-top: 50px;
+        padding: 20px;
+    }
+    // if the breakpoint is greater than 1024px and less than or equal to 1920px
+    @include media(">tablet", "<=LGdesktop") {
+          // align-items: center;
     display: block;
     overflow: hidden;
     padding-right: 40%;
@@ -127,26 +200,52 @@ body {
         line-height: 22px;
         font-weight: 600;
     }
+    }
+
 }
 
 .Logo1 {
+    @include media("<=tablet") {
+        width: 428px;
+        height: 428px;
+        border-radius: 6px;
+    }
+    // if the breakpoint is greater than 1024px and less than or equal to 1920px
+    @include media(">tablet", "<=LGdesktop") {
+        width: 228px;
+        height: 228px;
+        border-radius: 6px;
+    }
     width: 228px;
     height: 228px;
     border-radius: 6px;
 }
 .Logo2 {
-    width: 142px;
-    height: 142px;
+    @include media("<=tablet") {
+        display: none;
+    }
+    // if the breakpoint is greater than 1024px and less than or equal to 1920px
+    @include media(">tablet", "<=LGdesktop") {
+        width: 228px;
+        height: 228px;
+        border-radius: 6px;
+    }
+    width: 228px;
+    height: 228px;
     border-radius: 6px;
 }
 .Logo3 {
-    width: 285px;
-    height: 285px;
+    @include media("<=tablet") {
+        display: none;
+    }
+    // if the breakpoint is greater than 1024px and less than or equal to 1920px
+    @include media(">tablet", "<=LGdesktop") {
+        width: 228px;
+        height: 228px;
+        border-radius: 6px;
+    }
+    width: 228px;
+    height: 228px;
     border-radius: 6px;
 }
 
-.LogoSider {
-    width: 40px;
-    height: 40px;
-    border-radius: 6px;
-}

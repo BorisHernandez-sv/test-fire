@@ -1,15 +1,14 @@
 import React from 'react'
 
-import { Siderbar } from './components/home/Sidebar'
+import { Sidebar } from './components/sidebar/Sidebar'
 import { AppRouter } from './routers/AppRouter'
 
 
 export const YourPhoto = () => {
     return (
-        // <>  
-       
-
-        // </>
+        <>
+        <Sidebar/>
         <AppRouter />
+        </>
     )
 }

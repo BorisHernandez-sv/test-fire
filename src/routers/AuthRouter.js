@@ -5,9 +5,9 @@ import { RegisterScreen } from '../components/auth/RegisterScreen'
 
 export const AuthRouter = () => {
     return (
-          <div className="auth__main">
-              <div className="auth__box-container">
-              <Switch>
+        <div className="auth__main">
+            <div className="auth__box-container">
+            <Switch>
                 <Route 
                     exact
                     path="/auth/login"
@@ -20,9 +20,9 @@ export const AuthRouter = () => {
                 />
  
                 <Redirect to="/auth/register"/>
-                  
-              </Switch>
-              </div>
+                
+            </Switch>
+            </div>
           </div>
     )
 }

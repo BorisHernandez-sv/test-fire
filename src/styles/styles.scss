@@ -1,6 +1,8 @@
 @import './base/settings';
 @import './base/base';
+@import "./breakpoints/breakpoints.scss";
+
 
 @import './components/home';
 @import './components/buttons';
-
+@import './components/nav';
