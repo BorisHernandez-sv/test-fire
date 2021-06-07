@@ -28,6 +28,11 @@ export const AppRouter = () => {
                         path="/review"
                         component={ Review }
                     />
+                    <Route
+                        exact
+                        path="/checkout"
+                        // component={  }
+                    />
 
                     <Redirect to="/"/>
 
