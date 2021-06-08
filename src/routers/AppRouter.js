@@ -7,6 +7,7 @@ import {
   } from "react-router-dom";
 import { HomeScreen } from '../components/home/HomeScreen';
 import { Review } from '../components/screen-1/Review';
+import { Checkout } from '../components/checkout/Checkout';
 // import { AuthRouter } from './AuthRouter';
 
 export const AppRouter = () => {
@@ -31,7 +32,7 @@ export const AppRouter = () => {
                     <Route
                         exact
                         path="/checkout"
-                        // component={  }
+                        component={ Checkout }
                     />
 
                     <Redirect to="/"/>
