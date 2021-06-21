@@ -1,40 +1,65 @@
-import React from 'react'
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import LogoSider from '../images/logo192.png'
 import { GiToggles } from "react-icons/gi";
 
 export const Sidebar = () => {
+
+    const [click, setClick] = useState(false);
+    const handleClick = () => setClick(!click);
     return (
 
-            
-        <nav className="nav__menu">
-            <ul className="nav__sidebar-ul-left">
-            <li className="nav__item-logo">
-                <a href="#">
-                    {/* <img src = {LogoSider} className="nav__logo-sidebar" ></img> */}
-                <h1>Revive</h1>
-                </a>
-            </li>
+
+        <>
+        <nav className="navbar">
+          <div className="nav-container">
+            <NavLink exact to="/" className="nav-logo">
+              Revive
+              <i className="fas fa-code"></i>
+            </NavLink>
+  
+            <ul className={click ? "nav-menu active" : "nav-menu"}>
+              <li className="nav-item">
+                <NavLink
+                  exact
+                  to="/"
+                  activeClassName="active"
+                  className="nav-links"
+                  onClick={handleClick}
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  exact
+                  to="/review"
+                  activeClassName="active"
+                  className="nav-links"
+                  onClick={handleClick}
+                >
+                  Review
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  exact
+                  to="/checkout"
+                  activeClassName="active"
+                  className="nav-links"
+                  onClick={handleClick}
+                >
+                  Checkout
+                </NavLink>
+              </li>
+              
             </ul>
-            <ul className="nav__sidebar-ul-right">
-            <li className=" nav__item nav__item-toggle">
-                <a >
-                        <GiToggles 
-                        size = "64px"
-                        />
-                </a>
-            </li>
-            <li className="nav__item nav__contact">
-                <a href="#contact">Contáctenos</a>
-            </li>
-            <li className="nav__item nav__about">
-                <a href="#about">Ayuda</a>
-            </li>
-            <li className="nav__item nav__item-btn">
-                <a href="#home" ><button className="btn_home-outline">Comienza</button></a>
-            </li>
-            
-            </ul>
+            <div className="nav-icon" onClick={handleClick}>
+              <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
+            </div>
+          </div>
         </nav>
+      </>
 
     )
 }
