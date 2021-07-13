@@ -42,22 +42,23 @@ export const Checkout = () => {
     //         });
     // } 
     const uploadWidget =()=> {
-        window.cloudinary.openMediaLibrary({
-            cloud_name: 'mybloc',
-            api_key: '783936352855856',
-            username: 'Alice_Wonderlin@mycompany.com',
-            // timestamp: '1234567890',
-            signature: 'abcdefgh',
-            inline_container: '.cms-container',
-            multiple: true,
-            max_files: 8,
-            }, {
-                 insertHandler: function (data) {
-                   data.assets.forEach(asset => { console.log("Inserted asset:", 
-                     JSON.stringify(asset, null, 2)) })
-                 }
-               }
-            )
+       return ( window.cloudinary.openUploadWidget({
+            cloud_name: 'variable_correo_id',
+            uploadPreset:"ml_default"   
+            // api_key: '783936352855856',
+            // username: 'Alice_Wonderlin@mycompany.com',
+            // // timestamp: '1234567890',
+            // signature: 'abcdefgh',
+            // inline_container: '.cms-container',
+            // multiple: true,
+            // max_files: 8,
+            // }, {
+            //      insertHandler: function (data) {
+            //        data.assets.forEach(asset => { console.log("Inserted asset:", 
+            //          JSON.stringify(asset, null, 2)) })
+            //      }
+                }
+            ))
     }
     if (email){
     return (
